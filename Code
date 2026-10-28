@@ -1,0 +1,68 @@
+# Program to count the types of characters of user inputted strings
+# initial string item to start while loop
+string = "Hello World"
+# Represents total alphabetical character in all strings
+alphasum = 0
+# Represents total numerical characters in all strings
+numsum = 0
+# Represents total lowercase characters in all strings
+lowersum = 0
+# Represents total uppercase characters in all strings
+uppersum = 0
+# Represents total whitespace characters in all strings
+whitesum = 0
+# while loop to continue inputting strings until "end" is inputted
+while string != "end":
+    # Represents total alphabetical characters in a single string. resets every loop iteration
+    alph = 0
+    # Represents total numerical characters in a single string. resets every loop iteration
+    num = 0
+    # Represents total lowercase characters in a single string. resets every loop iteration
+    lower = 0
+    # Represents total uppercase characters in a single string. resets every loop iteration
+    upper = 0
+    # Represents total whitespace characters in a single string. resets every loop iteration
+    white = 0
+    # string input
+    string = input("Enter a string or type end: ")
+    # forbids statements from executing if string is "end"
+    if string != "end":
+        # for loop to check each character individually
+        for character in string:
+            # checks if character is alphabetical. If so, increase value of alph and alphsum
+            if character.isalpha():
+                alph += 1
+                alphasum += 1
+            # checks if character is numeric. If so, increase value of num and numsum
+            elif character.isnumeric():
+                num += 1
+                numsum += 1
+            # checks if character is a whitespace. If so, increase value of white and whitesum
+            elif character.isspace():
+                white += 1
+                whitesum += 1
+            # checks if character is lowercase. If so, increase value of lower and lowersum
+            if character.islower():
+                lower += 1
+                lowersum += 1
+            # checks if character is uppercase. If so, increase value of upper and uppersum
+            if character.isupper():
+                upper += 1
+                uppersum += 1
+        # output string and number of characters of each type after very input
+        print("Your string: ", string)
+        print("Alphabetical characters: ", alph)
+        print("Numerical characters: ", num)
+        print("Lower case characters: ", lower)
+        print("Upper case characters: ", upper)
+        print("Whitespace characters: ", white)
+# else function to make statements execute when loop stops
+else:
+    # divider for final totals
+    print()
+    # output total amount of character of each type from all strings inputted
+    print("Total amount of alphabetical character: ",alphasum)
+    print("Total amount of numerical characters: ", numsum)
+    print("Total amount of lowercase characters: ", lowersum)
+    print("Total amount of uppercase characters: ", uppersum)
+    print("Total amount of Whitespace characters: ", whitesum)
