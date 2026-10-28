@@ -1,0 +1,12 @@
+# Python String Scanner
+Enter a string, and it will count the number of:
+-Total characters,
+-Alphabetical characters, 
+-Numerical characters,
+-Lowercase characters
+-Uppercase characters
+-Whitespace characters.
+
+Do this as as many times as you want, then enter "end" to see the total of all the strings you entered.
+
+Made by Dimitri Slaughter
